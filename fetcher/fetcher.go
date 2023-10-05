@@ -9,9 +9,15 @@ import (
 	"golang.org/x/text/transform"
 	"io"
 	"net/http"
+	"time"
 )
 
+var rateLimiter = time.Tick(10 * time.Millisecond)
+
 func Fetch(url string) ([]byte, error) {
+	//  rateLimiter 爬取等待
+	<-rateLimiter
+
 	method := "GET"
 	req, err := http.NewRequest(method, url, nil)
 	if err != nil {
