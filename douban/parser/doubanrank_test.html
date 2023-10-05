@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <title>
+豆瓣电影排行榜
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2006 01:00:00 GMT">
+    
+    <meta name="keywords" content="电影排行榜、新片排行榜、豆瓣电影250"/>
+    <meta name="description" content="豆瓣电影排行榜,提供最新电影排行榜、本周电影口碑榜和豆瓣电影TOP250" />
+
+    <link rel="apple-touch-icon" href="https://img1.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img1.doubanio.com/f/vendors/02814fbb5bee25484516bd0a642af695f7ec5a83/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img1.doubanio.com/f/vendors/ee6598d46af0bc554cecec9bcbf525b9b0582cb0/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <link href="https://img1.doubanio.com/f/movie/cb1cb6aaa244dff6a281d103ff26d445debd130a/dist/movie/base/init.css" rel="stylesheet">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/vendors/0511abe9863c2ea7084efa7e24d1d86c5b3974f1/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/vendors/aa9559674f2476cdc16f755b3cdc4ebc478db669/js/douban.js"></script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/vendors/b0d3faaf7a432605add54908e39e17746824d6cc/js/separation/_all.js"></script>
+    
+    <style type="text/css"></style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <style type="text/css">
+    .icon-on-air{
+        font-size:12px;
+        margin-left:15px;
+        background-color:#71B5DE;
+        color:#fff;
+        padding:3px 5px;
+        border-radius:3px;
+        white-space: nowrap;
+    }
+
+      html .pl { white-space: normal; }
+    
+    .types {
+        margin-bottom: 20px
+    }
+    .types span {
+        display: inline-block;
+        margin: 5px 10px 5px 0;
+        min-width: 36px;
+    }
+  
+        .box_chart_num {
+            font-size: 11px;
+            color: #494949;
+        }
+    
+        .movie_top ul li div.name { width: 240px; }
+    
+        #douban-top250 h2 span{font-size:12px;margin-left:12px;}
+        #douban-top250 .douban-top250-bd{font-size:0;letter-spacing:-0.31em;*letter-spacing:normal;}
+        #douban-top250 dl{font-size:13px;display:inline-block;*display:inline;zoom:1;letter-spacing:normal;text-align:center;width:75px;overflow:hidden;vertical-align:top;margin:0 0 10px 0;}
+        #douban-top250 dt{width:65px;margin:0 auto 8px;height:100px;overflow:hidden;}
+    </style>
+
+    <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/164cfd8/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <a href="https://accounts.douban.com/passport/login?source=movie" class="nav-login" rel="nofollow">登录/注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">豆瓣</a>
+    </li>
+    <li class="">
+      <a href="https://book.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;0&quot;}">读书</a>
+    </li>
+    <li class="on">
+      <a href="https://movie.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;0&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;0&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;0&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;0&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;0&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://fm.douban.com&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;0&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;0&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;0&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/164cfd8/shire/bundle.js" defer="defer"></script>
+
+
+
+
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/164cfd8/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;movie/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影、电视剧、综艺、影人" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://movie.douban.com/cinema/nowplaying/"
+     >影讯&购票</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/explore"
+     >选电影</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/tv/"
+     >电视剧</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/chart"
+     >排行榜</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/review/best/"
+     >影评</a>
+    </li>
+    <li    ><a href="https://movie.douban.com/annual/2022?fullscreen=1&source=navigation"
+     >2022年度榜单</a>
+    </li>
+    <li    ><a href="https://standbyme2022.douban.com/?autorotate=false&fullscreen=true&hidenav=true&source=web_navigation"
+            target="_blank"
+     >2022书影音报告</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://movie.douban.com/annual/2022?fullscreen=1&source=movie_navigation" class="movieannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= img}}" width="40" />
+            <p>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                {{if sub_title}}
+                    <br /><span>{{= sub_title}}</span>
+                {{/if}}
+                {{if address}}
+                    <br /><span>{{= address}}</span>
+                {{/if}}
+                {{if episode}}
+                    {{if episode=="unknow"}}
+                        <br /><span>集数未知</span>
+                    {{else}}
+                        <br /><span>共{{= episode}}集</span>
+                    {{/if}}
+                {{/if}}
+            </p>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/164cfd8/movie/bundle.js" defer="defer"></script>
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>豆瓣电影排行榜</h1>
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    <h2>豆瓣新片榜   · · · · · · </h2>
+    <div class="indent">
+        
+
+
+
+
+
+<div class="">
+    <p class="ul first"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/34963356/"  title="过往人生">
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2897238625.jpg" width="75" alt="过往人生" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/34963356/"  class="">
+                        过往人生
+                        / <span style="font-size:13px;">前世因缘 / 前世姻缘</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-01-21(圣丹斯电影节) / 2023-06-02(美国) / 格蕾塔·李 / 刘台午 / 约翰·马加罗 / 文胜雅 / 尹智慧 / 崔元英 / 严晟敏 / 安敏扬 / 徐妍宇 / 黄胜妍 / 乔尼卡·T·吉布斯 / 丽莎·丹尼特 / 艾萨克·鲍威尔 / 娜迪亚·拉姆达斯 / 美国 / 韩国 / 席琳·宋...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">7.7</span>
+                                <span class="pl">(41908人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_34963356"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/35802912/"  title="复仇狗联盟">
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2897807305.jpg" width="75" alt="复仇狗联盟" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/35802912/"  class="">
+                        复仇狗联盟
+                        / <span style="font-size:13px;">流浪狗 / 复仇戆狗联盟(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-08-16(冰岛) / 2023-08-18(美国) / 威尔·法瑞尔 / 杰米·福克斯 / 威尔·福特 / 艾拉·菲舍尔 / 兰道尔·朴 / 乔什·加德 / 哈维·吉兰 / 布伦特·吉尔曼 / 罗伯·里格尔 / 詹米·德米特鲁 / 索菲娅·维加拉 / 汉娜·艾琳 / 泰勒·安东尼厄斯 /...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar35"></span>
+                                <span class="rating_nums">7.3</span>
+                                <span class="pl">(12300人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_35802912"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/3819860/"  title="夺宝奇兵5：命运转盘">
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2892683049.jpg" width="75" alt="夺宝奇兵5：命运转盘" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/3819860/"  class="">
+                        夺宝奇兵5：命运转盘
+                        / <span style="font-size:13px;">夺宝奇兵5 / 夺宝奇兵：命运轮盘(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-05-18(戛纳国际电影节) / 2023-06-30(美国/中国大陆) / 哈里森·福特 / 菲比·沃勒-布里奇 / 安东尼奥·班德拉斯 / 凯伦·阿兰 / 约翰·瑞斯-戴维斯 / 香奈特·芮妮·威尔逊 / 托马斯·克莱舒曼 / 托比·琼斯 / 波伊德·霍布鲁克 / 奥利维尔·里希特斯...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar35"></span>
+                                <span class="rating_nums">7.0</span>
+                                <span class="pl">(41104人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_3819860"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/35698284/"  title="关于我和鬼变成家人的那件事">
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2881995796.jpg" width="75" alt="关于我和鬼变成家人的那件事" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/35698284/"  class="">
+                        关于我和鬼变成家人的那件事
+                        / <span style="font-size:13px;">Marry My Dead Body / 鬼家人</span>
+                    </a>
+
+
+
+                    <p class="pl">2022-11-17(台北金马影展) / 2023-02-10(中国台湾) / 2023-08-10(中国台湾网络) / 许光汉 / 林柏宏 / 王净 / 蔡振南 / 王满娇 / 庹宗华 / 马念先 / 郑志伟 / 李至正 / 陈彦佐 / 张再兴 / 刘冠廷 / 炎亚纶 / 唐纶 / 蔡哲文 / 邱永腾 / 林鹤轩 / 巫书维...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">8.1</span>
+                                <span class="pl">(316964人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_35698284"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/33406097/"  title="星条红与皇室蓝">
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2896539228.jpg" width="75" alt="星条红与皇室蓝" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/33406097/"  class="">
+                        星条红与皇室蓝
+                        / <span style="font-size:13px;">星条红与王室蓝 / 红，白与皇室蓝</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-08-11(美国网络) / 泰勒·扎克哈尔·佩雷斯 / 尼古拉斯·加利齐纳 / 乌玛·瑟曼 / 莎拉·夏希 / 瑞秋·希尔森 / 斯蒂芬·弗雷 / 艾丽·巴姆博 / 小克利夫顿·克林斯 / 托马斯·弗林 / 胡安·卡斯塔诺 / 莎伦·D·克拉克 / 盖亚·蒙达多里 /...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">7.6</span>
+                                <span class="pl">(105387人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_33406097"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/35221425/"  title="红色天空">
+                        <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2888522083.jpg" width="75" alt="红色天空" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/35221425/"  class="">
+                        红色天空
+                        / <span style="font-size:13px;">火灼的天空(港) / 野火蔓延时(台)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-02-22(柏林电影节) / 2023-04-20(德国) / 托马斯·舒伯特 / 葆拉·贝尔 / 兰斯顿·伊贝尔 / 恩诺·特雷布斯 / 马蒂亚斯·勃兰特 / 德国 / 克里斯蒂安·佩措尔德 / 103分钟 / 红色天空 / 剧情 / 喜剧 / 爱情 / 克里斯蒂安·佩措尔德 Christian Petzold...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar40"></span>
+                                <span class="rating_nums">7.7</span>
+                                <span class="pl">(7253人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_35221425"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/35733431/"  title="不要见怪">
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2891129316.jpg" width="75" alt="不要见怪" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/35733431/"  class="">
+                        不要见怪
+                        / <span style="font-size:13px;">请勿见怪 / 调教你处男(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-06-15(中国香港) / 2023-06-23(美国) / 詹妮弗·劳伦斯 / 安德鲁·巴特·费尔德曼 / 劳拉·本纳蒂 / 马修·布罗德里克 / 娜塔丽·莫瑞丝 / 斯科特·麦克阿瑟 / 艾邦·摩斯-巴克拉赫 / 凯尔·穆尼 / 哈桑·明哈杰 / 乔丹·门多萨 / 阿马利娅·尤奥...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar35"></span>
+                                <span class="rating_nums">6.5</span>
+                                <span class="pl">(35022人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_35733431"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/35901878/"  title="疯狂元素城">
+                        <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2891542432.jpg" width="75" alt="疯狂元素城" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/35901878/"  class="">
+                        疯狂元素城
+                        / <span style="font-size:13px;">元素世界 / 元素大都会(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-05-27(戛纳电影节) / 2023-06-16(美国/中国大陆) / 莉娅·刘易斯 / 马莫多·阿西 / 罗纳尔多·德尔·卡门 / 希拉·沃索夫 / 温迪·麦丽登·康薇 / 凯瑟琳·欧哈拉 / 梅森·韦特海默 / 乔·佩拉 / 马修·杨·金 / 罗诺比尔·拉希瑞 / 伊诺森特·埃卡基蒂...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar35"></span>
+                                <span class="rating_nums">7.1</span>
+                                <span class="pl">(79845人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_35901878"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/33406478/"  title="修女2">
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2895269946.jpg" width="75" alt="修女2" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/33406478/"  class="">
+                        修女2
+                        / <span style="font-size:13px;">鬼修女Ⅱ(台) / 诡修女Ⅱ(港)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-09-07(中国香港) / 2023-09-08(美国) / 泰莎·法米加 / 乔纳斯·布洛凯 / 斯托姆·瑞德 / 安娜·帕波维尔 / 邦妮·阿伦斯 / 凯特琳·罗斯·道尼 / 苏珊娜·伯蒂什 / 莱昂廷·翁西厄 / 阿努克·达尔文·霍梅伍德 / 彼得·哈德森 / 塔玛尔·巴鲁克...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar30"></span>
+                                <span class="rating_nums">5.9</span>
+                                <span class="pl">(2623人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_33406478"></div>
+    <p class="ul"></p>
+    <table width="100%" class="">
+        <tr class="item">
+            <td width="100" valign="top">
+                
+
+                    <a class="nbg" href="https://movie.douban.com/subject/26369765/"  title="忍者神龟：变种大乱斗">
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2895790300.jpg" width="75" alt="忍者神龟：变种大乱斗" class=""/>
+                    </a>
+            </td>
+
+            <td valign="top">
+                
+
+                <div class="pl2">
+
+                    <a href="https://movie.douban.com/subject/26369765/"  class="">
+                        忍者神龟：变种大乱斗
+                        / <span style="font-size:13px;">忍者龟：变异危机(港) / 忍者龟：变种大乱斗(台)</span>
+                    </a>
+
+
+
+                    <p class="pl">2023-08-02(美国) / 2023-08-11(中国大陆) / 尼古拉斯·坎图 / 布雷迪·诺恩 / 小肖恩·布朗 / 迈克·艾贝 / 成龙 / 阿尤·艾德维利 / 艾斯·库珀 / 塞斯·罗根 / 约翰·塞纳 / 玛娅·鲁道夫 / 保罗·路德 / 罗丝·伯恩 / 娜塔希娅·德米特里欧 / 吉安卡罗·埃斯波西托...</p>
+
+                    
+
+
+                        
+                        <div class="star clearfix">
+                                <span class="allstar35"></span>
+                                <span class="rating_nums">6.9</span>
+                                <span class="pl">(9384人评价)</span>
+
+                        </div>
+
+
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div id="collect_form_26369765"></div>
+</div>
+
+
+    </div>
+    
+
+            </div>
+            <div class="aside">
+                
+    
+  
+  <div>
+      <h2>分类排行榜 · · · · · ·<img style=" position: absolute;" src="https://img1.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif"></h2>
+      <div class="types">
+          <span><a href="/typerank?type_name=剧情&type=11&interval_id=100:90&action=">剧情</a></span>
+          <span><a href="/typerank?type_name=喜剧&type=24&interval_id=100:90&action=">喜剧</a></span>
+          <span><a href="/typerank?type_name=动作&type=5&interval_id=100:90&action=">动作</a></span>
+          <span><a href="/typerank?type_name=爱情&type=13&interval_id=100:90&action=">爱情</a></span>
+          <span><a href="/typerank?type_name=科幻&type=17&interval_id=100:90&action=">科幻</a></span>
+          <span><a href="/typerank?type_name=动画&type=25&interval_id=100:90&action=">动画</a></span>
+          <span><a href="/typerank?type_name=悬疑&type=10&interval_id=100:90&action=">悬疑</a></span>
+          <span><a href="/typerank?type_name=惊悚&type=19&interval_id=100:90&action=">惊悚</a></span>
+          <span><a href="/typerank?type_name=恐怖&type=20&interval_id=100:90&action=">恐怖</a></span>
+          <span><a href="/typerank?type_name=纪录片&type=1&interval_id=100:90&action=">纪录片</a></span>
+          <span><a href="/typerank?type_name=短片&type=23&interval_id=100:90&action=">短片</a></span>
+          <span><a href="/typerank?type_name=情色&type=6&interval_id=100:90&action=">情色</a></span>
+          <span><a href="/typerank?type_name=音乐&type=14&interval_id=100:90&action=">音乐</a></span>
+          <span><a href="/typerank?type_name=歌舞&type=7&interval_id=100:90&action=">歌舞</a></span>
+          <span><a href="/typerank?type_name=家庭&type=28&interval_id=100:90&action=">家庭</a></span>
+          <span><a href="/typerank?type_name=儿童&type=8&interval_id=100:90&action=">儿童</a></span>
+          <span><a href="/typerank?type_name=传记&type=2&interval_id=100:90&action=">传记</a></span>
+          <span><a href="/typerank?type_name=历史&type=4&interval_id=100:90&action=">历史</a></span>
+          <span><a href="/typerank?type_name=战争&type=22&interval_id=100:90&action=">战争</a></span>
+          <span><a href="/typerank?type_name=犯罪&type=3&interval_id=100:90&action=">犯罪</a></span>
+          <span><a href="/typerank?type_name=西部&type=27&interval_id=100:90&action=">西部</a></span>
+          <span><a href="/typerank?type_name=奇幻&type=16&interval_id=100:90&action=">奇幻</a></span>
+          <span><a href="/typerank?type_name=冒险&type=15&interval_id=100:90&action=">冒险</a></span>
+          <span><a href="/typerank?type_name=灾难&type=12&interval_id=100:90&action=">灾难</a></span>
+          <span><a href="/typerank?type_name=武侠&type=29&interval_id=100:90&action=">武侠</a></span>
+          <span><a href="/typerank?type_name=古装&type=30&interval_id=100:90&action=">古装</a></span>
+          <span><a href="/typerank?type_name=运动&type=18&interval_id=100:90&action=">运动</a></span>
+          <span><a href="/typerank?type_name=黑色电影&type=31&interval_id=100:90&action=">黑色电影</a></span>
+      </div>
+  </div>
+
+
+    
+    <div class="movie_top" id="ranking">
+    <div class="movie_top" id="ranking">
+        
+    
+    
+    <h2>一周口碑榜· · · · · · <span class="box_chart_num color-gray">9月29日 更新</span></h2>
+    <ul class="content" id="listCont2">
+        <li class="clearfix">
+            <div class="no">1</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/36218052/" class="">
+                    德黑兰七冬
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">10</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">2</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/35715748/" class="">
+                    不再欺骗
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">9</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">3</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/36161478/" class="">
+                    小镇幽浮
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">3</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">4</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/36181528/" class="">
+                    戏剧训练营
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">7</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">5</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/35525524/" class="">
+                    果尔达
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">6</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">6</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/35361159/" class="">
+                    一个人的朝圣
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">5</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">7</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/36488620/" class="">
+                    无敌少侠：原子女侠伊芙
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">4</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">8</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/36037265/" class="">
+                    垫底俱乐部
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">3</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">9</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/35594886/" class="">
+                    胜利的形象
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">2</div>
+            </span>
+        </li>
+        <li class="clearfix">
+            <div class="no">10</div>
+            <div class="name">
+                <a onclick="moreurl(this, {from:'mv_week'})" href="https://movie.douban.com/subject/35303814/" class="">
+                    走私
+                </a>
+            </div>
+            <span class="">
+                    <div class="up">1</div>
+            </span>
+        </li>
+    </ul>
+
+    </div>
+
+    <div class="movie_top" id="ranking">
+        
+    
+    <h2>北美票房榜· · · · · · <span class="box_chart_num color-gray">9月29日 更新 / 美元</span></h2>
+    <ul class="content" id="listCont1">
+            
+                <li class="clearfix">
+                    <div class="no">1</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/35712771/" class="">
+                            汪汪队立大功大电影2：超能大冒险
+                        </a>
+                                <img src="https://img1.doubanio.com/f/vendors/267048ed5190c4c6b513c2e559cae7ae8b8f0af5/pics/box_new.png" />
+                    </div>
+                    <span class="box_chart_num color-gray">2300万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">2</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/36116844/" class="">
+                            电锯惊魂10
+                        </a>
+                                <img src="https://img1.doubanio.com/f/vendors/267048ed5190c4c6b513c2e559cae7ae8b8f0af5/pics/box_new.png" />
+                    </div>
+                    <span class="box_chart_num color-gray">1800万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">3</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/35453476/" class="">
+                            AI创世者
+                        </a>
+                                <img src="https://img1.doubanio.com/f/vendors/267048ed5190c4c6b513c2e559cae7ae8b8f0af5/pics/box_new.png" />
+                    </div>
+                    <span class="box_chart_num color-gray">1400万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">4</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/33406478/" class="">
+                            修女2
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">468万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">5</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/36091079/" class="">
+                            盲证
+                        </a>
+                                <img src="https://img1.doubanio.com/f/vendors/267048ed5190c4c6b513c2e559cae7ae8b8f0af5/pics/box_new.png" />
+                    </div>
+                    <span class="box_chart_num color-gray">414万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">6</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/36117224/" class="">
+                            威尼斯惊魂夜
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">380万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">7</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/36082226/" class="">
+                            傻钱
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">350万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">8</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/35736400/" class="">
+                            伸冤人3
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">270万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">9</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/25845297/" class="">
+                            敢死队4：最终章
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">250万</span>
+                </li>
+            
+                <li class="clearfix">
+                    <div class="no">10</div>
+                    <div class="box_chart">
+                        <a onclick="moreurl(this, {from:'mv_us_week'})" href="https://movie.douban.com/subject/4058939/" class="">
+                            芭比
+                        </a>
+                    </div>
+                    <span class="box_chart_num color-gray">143万</span>
+                </li>
+    </ul>
+
+    </div>
+
+    <!-- douban ad begin -->
+    
+
+
+
+<link rel="stylesheet" href="https://img1.doubanio.com/f/movie/400d7765546ceac9b07913937f6a29d532d41690/dist/movie/ad/mobile_app_ad.css">
+<div class="mobile-app-entrance block5 app-movie">
+    <a class="entrance-link" href="https://www.douban.com/doubanapp/frodo">
+        <div class="entrance-qrcode">
+            <img src="https://img1.doubanio.com/f/movie/a02f6ed325fc52e220f299d51e730c422e2bcd16/pics/movie/douban_app_ad/qrcode.png" alt="扫码下载豆瓣 App" width="80" height="80" />
+        </div>
+        <div class="entrance-info">
+            <span class="app-icon icon-movie"></span>
+            <span class="main-title">豆瓣</span>
+            <span class="sub-title">你的移动观影指南</span>
+        </div>
+    </a>
+</div>
+
+    <!-- douban ad end -->
+
+        <div class="indent">
+            
+    <div id="douban-top250">
+        <div class="douban-top250-hd">
+            <h2>豆瓣电影TOP250
+                <span>
+                    <a href="https://movie.douban.com/top250">全部&nbsp;</a>
+                </span>
+            </h2>
+        </div>
+        <div class="douban-top250-bd">
+            
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/3287562/?from=top250">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p792776858.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/3287562/?from=top250" class="">
+                    神偷奶爸
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/3793023/?from=top250">
+                    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p579729551.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/3793023/?from=top250" class="">
+                    三傻大闹宝莱坞
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1307914/?from=top250">
+                    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2564556863.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1307914/?from=top250" class="">
+                    无间道
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/10533913/?from=top250">
+                    <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2896589345.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/10533913/?from=top250" class="">
+                    头脑特工队
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/21937452/?from=top250">
+                    <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2118532944.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/21937452/?from=top250" class="">
+                    素媛
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/5989818/?from=top250">
+                    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1675053073.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/5989818/?from=top250" class="">
+                    萤火之森
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1461403/?from=top250">
+                    <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2528965424.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1461403/?from=top250" class="">
+                    茶馆
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1300992/?from=top250">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2190556408.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1300992/?from=top250" class="">
+                    完美的世界
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1292215/?from=top250">
+                    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2447590313.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1292215/?from=top250" class="">
+                    天使爱美丽
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1291548/?from=top250">
+                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575465690.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1291548/?from=top250" class="">
+                    死亡诗社
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1292328/?from=top250">
+                    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1982176012.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/1292328/?from=top250" class="">
+                    东邪西毒
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+        <dl class="">
+            <dt>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/2051007/?from=top250">
+                    <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p719849995.jpg" class="m_sub_img"/>
+                </a>
+            </dt>
+            <dd>
+                <a onclick="moreurl(this, {from:'mv_tops'})" href="https://movie.douban.com/subject/2051007/?from=top250" class="">
+                    哈利·波特与死亡圣器(上)
+                </a>
+                <span class="gact"></span><br/>
+            </dd>
+        </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+
+        </div>
+    </div>
+    
+
+        </div>
+    </div>
+
+            </div>
+            <div class="extra">
+                
+    <!-- douban ad begin -->
+    <div id="dale_movie_chart_bottom_banner"></div>
+    <!-- douban ad end -->
+
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2023 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=movie" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+    </div>
+
+    </div>
+    <!-- COLLECTED JS -->
+        
+        
+    <link rel="stylesheet" type="text/css" href="https://img1.doubanio.com/f/vendors/0035bb2f83e2cba49ecf634fed57f9ff1bbd0d09/css/ui/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="https://img1.doubanio.com/f/movie/9dbc931479d6c183e970ea3594672460b6c96b3c/dist/movie/mod/login_pop.css" />
+    <script type="text/javascript" src="https://img1.doubanio.com/f/vendors/f25ae221544f39046484a823776f3aa01769ee10/js/ui/dialog.js"></script>
+    <script type="text/javascript">
+        var HTTPS_DB = "https://www.douban.com"
+    </script>
+    <script type="text/javascript" src="https://img1.doubanio.com/f/movie/3897d4734502adbdaa37cdf7f5c67a8e543ceefe/dist/movie/mod/login_pop.js"></script>
+
+    
+    <!-- douban ad begin -->
+    
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '',
+            browserId = 'mSFi1gkfw8w',
+            criteria = '3:/chart',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_movie_chart_bottom_banner'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/aHF4dWV0OC9mL2FkanMvYzQyYzU5YWEwNWM4YTkyOTE3Y2UzM2RkZGEwZDk0OWYwZGM0YjVjNC9hZC5yZWxlYXNlLmpz?company_token=kX69T8w1wyOE-dale');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+    <!-- douban ad end -->
+
+    
+  
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+      
+
+    <!-- dae-web-movie--default-5b4c887b69-wj45x-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
+
