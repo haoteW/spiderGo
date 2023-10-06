@@ -27,7 +27,7 @@ var reReleaseDate = regexp.MustCompile(releaseDateRegex)
 var reLong = regexp.MustCompile(longRegex)
 var reSname = regexp.MustCompile(snameRegex)
 
-func ParseMovieInfo(contents []byte, title string) engine.ParseResult {
+func ParseMovieInfo(contents []byte, title string, id string, url string) engine.ParseResult {
 	var movieInfo model.MovieInfo
 
 	matches := reDirctor.FindAllSubmatch(contents, -1)
@@ -58,13 +58,15 @@ func ParseMovieInfo(contents []byte, title string) engine.ParseResult {
 	movieInfo.Sname = combina(matches)
 
 	movieInfo.Title = title
+	movieInfo.ID = id
+	movieInfo.URL = url
 
 	result := engine.ParseResult{}
 	jsonStr, err := json.Marshal(movieInfo)
 	if err != nil {
 		return result
 	}
-	result.Items = append(result.Items, string(jsonStr))
+	result.Items = append(result.Items, movieInfo)
 	println(string(jsonStr))
 
 	return result
@@ -72,8 +74,13 @@ func ParseMovieInfo(contents []byte, title string) engine.ParseResult {
 
 func combina(res [][][]byte) string {
 	var ret string
+	itemLimit := 0
 	for _, m := range res {
+		if itemLimit >= 5 {
+			break
+		}
 		ret += string(m[1]) + "/"
+		itemLimit++
 	}
 	if len(ret) > 0 {
 		ret = ret[:len(ret)-1]
