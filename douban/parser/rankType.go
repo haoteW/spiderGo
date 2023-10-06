@@ -16,12 +16,12 @@ func ParseRankType(content []byte) engine.ParseResult {
 		return result
 	}
 	for _, item := range rankType {
-		result.Items = append(result.Items, item.Title)
+		//result.Items = append(result.Items, item.Title)
 		result.Requests = append(
 			result.Requests, engine.Request{
 				Url: item.URL,
 				ParserFunc: func(contents []byte) engine.ParseResult {
-					return ParseMovieInfo(contents, item.Title)
+					return ParseMovieInfo(contents, item.Title, item.ID, item.URL)
 				},
 			},
 		)

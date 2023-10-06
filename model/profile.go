@@ -3,6 +3,8 @@ package model
 const Domain = "https://movie.douban.com"
 
 type MovieInfo struct {
+	ID           string `json:"id"`
+	URL          string `json:"url"`
 	Director     string `json:"director"`
 	Screenwriter string `json:"screenwriter"`
 	Starring     string `json:"starring"`
