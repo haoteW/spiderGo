@@ -10,7 +10,7 @@ var (
 		"Region VARCHAR(255) CHARACTER SET utf8mb4," +
 		"Language VARCHAR(255) CHARACTER SET utf8mb4," +
 		"ReleaseDate VARCHAR(255) CHARACTER SET utf8mb4," +
-		"TimeLong VARCHAR(10) CHARACTER SET utf8mb4," +
+		"TimeLong VARCHAR(30) CHARACTER SET utf8mb4," +
 		"Sname VARCHAR(255) CHARACTER SET utf8mb4," +
 		"Title VARCHAR(255) CHARACTER SET utf8mb4," +
 		"URL VARCHAR(255) UNIQUE," +

@@ -7,7 +7,7 @@ import (
 	"regexp"
 )
 
-const dirctorRegex = `<span ><span class='pl'>导演</span>: <span class='attrs'><a href="/celebrity/[^"]*?" rel="v:directedBy">([^<]+?)</a></span></span><br/>`
+const directorRegex = `<span ><span class='pl'>导演</span>: <span class='attrs'><a href="/celebrity/[^"]*?" rel="v:directedBy">([^<]+?)</a></span></span><br/>`
 const writerRegex = `<a href="/celebrity/[^"]*?">([^<]+?)</a>`
 const starringRegex = `<a href="/celebrity/[^"]*?" rel="v:starring">([^<]+?)</a>`
 const movieTypeRegex = `<span property="v:genre">([^<]+?)</span>`
@@ -17,7 +17,7 @@ const releaseDateRegex = `<span property="v:initialReleaseDate" content="[^"]*?"
 const longRegex = `<span property="v:runtime" content="[^"]*?">([^<]+?)</span>`
 const snameRegex = `<span class="pl">又名:</span>([^<]+?)<br/>`
 
-var reDirctor = regexp.MustCompile(dirctorRegex)
+var reDirctor = regexp.MustCompile(directorRegex)
 var reWriter = regexp.MustCompile(writerRegex)
 var reStarring = regexp.MustCompile(starringRegex)
 var reMovieType = regexp.MustCompile(movieTypeRegex)
@@ -27,39 +27,39 @@ var reReleaseDate = regexp.MustCompile(releaseDateRegex)
 var reLong = regexp.MustCompile(longRegex)
 var reSname = regexp.MustCompile(snameRegex)
 
-func ParseMovieInfo(contents []byte, title string, id string, url string) engine.ParseResult {
+func ParseMovieInfo(contents []byte, rankType model.RankType) engine.ParseResult {
 	var movieInfo model.MovieInfo
 
 	matches := reDirctor.FindAllSubmatch(contents, -1)
-	movieInfo.Director = combina(matches)
+	movieInfo.Director = combine(matches)
 
 	matches = reWriter.FindAllSubmatch(contents, -1)
-	movieInfo.Screenwriter = combina(matches)
+	movieInfo.Screenwriter = combine(matches)
 
 	matches = reStarring.FindAllSubmatch(contents, -1)
-	movieInfo.Starring = combina(matches)
+	movieInfo.Starring = combine(matches)
 
 	matches = reMovieType.FindAllSubmatch(contents, -1)
-	movieInfo.Type = combina(matches)
+	movieInfo.Type = combine(matches)
 
 	matches = reRegion.FindAllSubmatch(contents, -1)
-	movieInfo.Region = combina(matches)
+	movieInfo.Region = combine(matches)
 
 	matches = reLanguage.FindAllSubmatch(contents, -1)
-	movieInfo.Language = combina(matches)
+	movieInfo.Language = combine(matches)
 
 	matches = reReleaseDate.FindAllSubmatch(contents, -1)
-	movieInfo.ReleaseDate = combina(matches)
+	movieInfo.ReleaseDate = combine(matches)
 
 	matches = reLong.FindAllSubmatch(contents, -1)
-	movieInfo.Long = combina(matches)
+	movieInfo.Long = combine(matches)
 
 	matches = reSname.FindAllSubmatch(contents, -1)
-	movieInfo.Sname = combina(matches)
+	movieInfo.Sname = combine(matches)
 
-	movieInfo.Title = title
-	movieInfo.ID = id
-	movieInfo.URL = url
+	movieInfo.Title = rankType.Title
+	movieInfo.ID = rankType.ID
+	movieInfo.URL = rankType.URL
 
 	result := engine.ParseResult{}
 	jsonStr, err := json.Marshal(movieInfo)
@@ -72,7 +72,7 @@ func ParseMovieInfo(contents []byte, title string, id string, url string) engine
 	return result
 }
 
-func combina(res [][][]byte) string {
+func combine(res [][][]byte) string {
 	var ret string
 	itemLimit := 0
 	for _, m := range res {

@@ -1,0 +1,45 @@
+.item {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    border-radius: 5px; /* 圆角边框 */
+    transition: transform 0.3s ease;
+    white-space: nowrap; /* 文本不换行 */
+    overflow: hidden; /* 隐藏溢出文本 */
+    text-overflow: ellipsis; /* 使用省略号表示溢出文本 */
+}
+
+.item:hover {
+    transform: translateX(10px);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* 悬停时的阴影效果 */
+}
+
+#loadMore {
+    margin-top: 10px;
+}
+
+table {
+    overflow: auto; /* 启用表格滚动 */
+}
+
+/* 自定义滚动条样式 */
+table::-webkit-scrollbar {
+    width: 12px;
+}
+
+table::-webkit-scrollbar-track {
+    background: #f2f2f2;
+}
+
+table::-webkit-scrollbar-thumb {
+    background: #007bff;
+}
+
+tr:hover {
+    background-color: #f0f0f0; /* 悬停时的背景颜色 */
+}
+
+
+

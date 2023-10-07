@@ -39,7 +39,8 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			go func() { e.ItemChan <- item }()
+			newItem := item
+			go func() { e.ItemChan <- newItem }()
 		}
 
 		for _, request := range result.Requests {
