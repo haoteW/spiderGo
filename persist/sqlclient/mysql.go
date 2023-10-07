@@ -50,7 +50,7 @@ func Update(movieInfo model.MovieInfo) {
 //	 		1、field请用,隔开 field:param1,param2
 //	 		2、orderType可选 desc asc orderType:asc 为空默认asc升序
 //		"limit" 对应string 0,20 page,pageSize
-func Query(fields []string, conditions map[string]interface{}) {
+func Query(fields []string, conditions map[string]interface{}) []model.MovieInfo {
 	retField := strings.Join(fields, ", ")
 	if retField == "" {
 		retField = "*"
@@ -58,12 +58,40 @@ func Query(fields []string, conditions map[string]interface{}) {
 	query := "SELECT " + retField + " FROM movieInfo"
 	if whereCondition, ok := conditions["where"]; ok {
 		query += buildWhereClause(whereCondition)
-		query += buildClause(conditions)
 	}
-	_, err := db.Query(query)
+	query += buildClause(conditions)
+	rows, err := db.Query(query)
 	if err != nil {
-		fmt.Println(err)
+		log.Panicf("Query has failed : %v", err)
 	}
+	defer rows.Close()
+
+	var movieList []model.MovieInfo
+
+	for rows.Next() {
+		var movie model.MovieInfo
+		err := rows.Scan(
+			&movie.ID,
+			&movie.Director,
+			&movie.Screenwriter,
+			&movie.Starring,
+			&movie.Type,
+			&movie.Region,
+			&movie.Language,
+			&movie.ReleaseDate,
+			&movie.Long,
+			&movie.Sname,
+			&movie.Title,
+			&movie.URL,
+		)
+		if err != nil {
+			panic(err)
+		}
+
+		movieList = append(movieList, movie)
+	}
+
+	return movieList
 }
 
 // 支持事务回滚机制的批量数据插入
@@ -79,9 +107,9 @@ func MultiInsert(items ...model.MovieInfo) error {
 	for _, item := range items {
 		_, err := stmt.Exec(item.ID, item.Director, item.Screenwriter, item.Starring, item.Type, item.Region, item.Language, item.ReleaseDate, item.Long, item.Sname, item.Title, item.URL)
 		if err != nil {
-			log.Printf("INSERT failed：%v", err)
+			log.Printf("INSERT failed ID: %v ：%v", item.ID, err)
 			tx.Rollback()
-			return fmt.Errorf("INSERT failed：%v", err)
+			return fmt.Errorf("INSERT failed ID: %v ：%v", item.ID, err)
 		}
 	}
 	tx.Commit()

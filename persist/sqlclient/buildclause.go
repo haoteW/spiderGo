@@ -19,13 +19,13 @@ func buildWhereClause(whereCondition interface{}) string {
 func buildClause(conditions map[string]interface{}) string {
 	var result = ""
 	if groupCondition, ok := conditions["group"]; ok {
-		result += "GROUP BY " + buildGroupClause(groupCondition)
+		result += " GROUP BY " + buildGroupClause(groupCondition)
 	}
 	if orderCondition, ok := conditions["order"]; ok {
-		result += "ORDER BY " + buildOrderClause(orderCondition)
+		result += " ORDER BY " + buildOrderClause(orderCondition)
 	}
 	if limitCondition, ok := conditions["limit"]; ok {
-		result += "LIMIT " + buildLimitClause(limitCondition)
+		result += " LIMIT " + buildLimitClause(limitCondition)
 	}
 	return result
 }

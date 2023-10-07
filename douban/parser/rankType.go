@@ -7,10 +7,10 @@ import (
 	"good-spider/model"
 )
 
-func ParseRankType(content []byte) engine.ParseResult {
+func ParseRankType(content []byte, noOne model.RankType) engine.ParseResult {
 	result := engine.ParseResult{}
 	// 解析接口返回结果
-	var rankType model.RankType
+	var rankType []model.RankType
 	err := json.Unmarshal(content, &rankType)
 	if err != nil {
 		return result
@@ -19,10 +19,9 @@ func ParseRankType(content []byte) engine.ParseResult {
 		//result.Items = append(result.Items, item.Title)
 		result.Requests = append(
 			result.Requests, engine.Request{
-				Url: item.URL,
-				ParserFunc: func(contents []byte) engine.ParseResult {
-					return ParseMovieInfo(contents, item.Title, item.ID, item.URL)
-				},
+				Url:        item.URL,
+				ParserFunc: ParseMovieInfo,
+				RankType:   item,
 			},
 		)
 		fmt.Printf("Type: %s, URL : %s\n", item.Title, item.URL)

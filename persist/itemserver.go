@@ -36,3 +36,14 @@ func save(items ...interface{}) (err error) {
 	err = sqlclient.MultiInsert(movieInfo...)
 	return err
 }
+
+func Search(limit string, orderType string) []model.MovieInfo {
+	conditions := map[string]interface{}{
+		"limit": limit,
+		"order": map[string]string{
+			"field":     "ID",
+			"orderType": orderType,
+		},
+	}
+	return sqlclient.Query([]string{}, conditions)
+}

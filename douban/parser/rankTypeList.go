@@ -12,7 +12,7 @@ import (
 const typeRegex = `<a href="(/typerank\?type_name=[^&]*?&type=[^&]*?&interval_id=[^&]*?&action=)">([^<]+?)</a>`
 
 // 解析排行榜类别
-func ParseTypeList(contents []byte) engine.ParseResult {
+func ParseTypeList(contents []byte, noOne model.RankType) engine.ParseResult {
 	// MustCompile will panic if cannot parser
 	re := regexp.MustCompile(typeRegex)
 	matches := re.FindAllSubmatch(contents, -1)

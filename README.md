@@ -19,6 +19,10 @@
         2、队列版：在简单版基础上增加一个worker channel 
                 用于监听空闲worker，拆分请求下发与worker监听的高度串行化
     
-## ElasticSearch
-    全文搜索引擎
-    可快速存储搜索和分析海量数据
+## docker
+    docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=123456  -p 3306:3306 mysql
+    docker exec -it mysql-container mysql -u root -p
+
+## 补充前端展现样式
+![img.png](img.png)
+

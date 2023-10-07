@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Info</title>
+    <style>
+        /* 增加滑动样式 */
+        .item {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            border-radius: 5px; /* 圆角边框 */
+            transition: transform 0.3s ease;
+            /*white-space: nowrap; !* 文本不换行 *!*/
+            overflow: hidden; /* 隐藏溢出文本 */
+            text-overflow: ellipsis; /* 使用省略号表示溢出文本 */
+        }
+
+        .item:hover {
+            transform: translateX(10px);
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* 悬停时的阴影效果 */
+        }
+
+        #loadMore {
+            display: block;
+            margin: 0 auto; /* 居中按钮 */
+            padding: 30px 100px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px; /* 圆角按钮 */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px; /* 设置字体大小为 16px */
+            transition: background-color 0.3s ease;
+        }
+
+        #loadMore:hover {
+            background-color: #0056b3; /* 悬停时的背景颜色变化 */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* 原有的表格样式 */
+        table {
+            overflow: auto; /* 启用表格滚动 */
+            /*border-collapse: collapse;*/
+            /*width: 100%;*/
+        }
+
+        /* 自定义滚动条样式 */
+        table::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        table::-webkit-scrollbar-track {
+            background: #f2f2f2;
+        }
+
+        table::-webkit-scrollbar-thumb {
+            background: #007bff;
+        }
+
+        tr:hover {
+            background-color: #a8c598; /* 悬停时的背景颜色 */
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+</head>
+<body>
+<h1>Movie Info</h1>
+
+<table id="movieTable">
+    <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>导演</th>
+        <th>编剧</th>
+        <th>演员</th>
+        <th>类型</th>
+        <th>地区</th>
+        <th>语言</th>
+        <th>上映日期</th>
+        <th>时长</th>
+        <th>别名</th>
+    </tr>
+</table>
+
+<!-- "Load More" 按钮 -->
+<button id="loadMore">Load More</button>
+
+<script>
+    // 使用 JavaScript 和 AJAX 请求获取 JSON 数据并显示在表格中
+    const tableMovieInfo = document.getElementById("movieTable");
+    const loadMoreButton = document.getElementById("loadMore");
+    // 指定后端的 IP 地址和端口号
+    const backendIpAddress = "127.0.0.1";  // 替换为实际的后端 IP 地址
+    const backendPort = "8080";  // 替换为实际的后端端口号
+    // 准备一次加载的项目数
+    const itemsPerLoad = 10;
+
+    let pn = 0;
+    let rn = itemsPerLoad;
+
+    function fetchData() {
+        if (pn >= 300){
+            return
+        }
+
+        // 使用 Fetch API 进行 AJAX 请求
+        fetch(`http://${backendIpAddress}:${backendPort}/getMovieData?limit=${pn},${rn}&orderType=asc`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json", // 设置请求头
+            },
+            credentials: "include", // 允许发送凭据（例如，跨域请求时发送 cookies）
+        }).then(response => {
+            // console.error("response.status : " + response.status); // 添加调试信息
+            if (response.status === 204) {
+                // 处理空响应：隐藏按钮并返回一个空数组
+                // loadMoreButton.style.display = "none"; // 隐藏按钮
+                return [];
+            } else if (response.ok) {
+                return response.json(); // 将非空响应解析为 JSON
+            } else {
+                // 处理响应不成功的情况
+                loadMoreButton.style.display = "none"; // 隐藏按钮
+                throw new Error(`Request failed with status: ${response.status}`);
+            }
+        }).then(movieData => {
+            // 检查响应数据是否为空
+            if (movieData.length === 0) {
+                loadMoreButton.style.display = "none"; // 隐藏按钮
+            } else {
+                movieData.forEach(data => {
+                    const row = tableMovieInfo.insertRow();
+                    const idCell = row.insertCell(0);
+                    const titleCell = row.insertCell(1);
+                    const directorCell = row.insertCell(2);
+                    const screenwriterCell = row.insertCell(3);
+                    const starringCell = row.insertCell(4);
+                    const typeCell = row.insertCell(5);
+                    const regionCell = row.insertCell(6);
+                    const languageCell = row.insertCell(7);
+                    const releaseDateCell = row.insertCell(8);
+                    const longCell = row.insertCell(9);
+                    const snameCell = row.insertCell(10);
+
+                    idCell.textContent = data.m_id;
+                    directorCell.textContent = data.m_director;
+                    screenwriterCell.textContent = data.m_screenwriter;
+                    starringCell.textContent = data.m_starring;
+                    typeCell.textContent = data.m_type;
+                    regionCell.textContent = data.m_region;
+                    languageCell.textContent = data.m_language;
+                    releaseDateCell.textContent = data.m_releaseDate;
+                    longCell.textContent = data.m_long;
+                    snameCell.textContent = data.m_sname;
+
+                    // 创建一个链接元素来显示URL，并将其作为title的超链接展示
+                    const titleLink = document.createElement("a");
+                    titleLink.href = data.m_url;
+                    titleLink.textContent = data.m_title;
+                    titleCell.appendChild(titleLink);
+
+                    // 为每个条目添加滑动效果样式
+                    row.classList.add("item");
+                });
+            }
+        }).catch(error => {
+            console.error("Error loading data: " + error);
+        });
+
+        pn += itemsPerLoad;
+    }
+
+    // 初始加载数据
+    fetchData();
+
+    // 监听滚动事件以判断是否滚动到底部
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const contentHeight = document.body.scrollHeight;
+
+        if (scrollY + windowHeight >= contentHeight - 50) {
+            // 当距离底部不足 50px 时触发加载更多
+            fetchData();
+        }
+    });
+
+    // 加载更多按钮点击事件
+    loadMoreButton.addEventListener("click", () => {
+        fetchData(); // 发起异步数据请求以加载更多内容
+    });
+</script>
+
+</body>
+</html>
