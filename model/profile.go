@@ -3,19 +3,21 @@ package model
 const Domain = "https://movie.douban.com"
 
 type MovieInfo struct {
-	Director     string `json:"director"`
-	Screenwriter string `json:"screenwriter"`
-	Starring     string `json:"starring"`
-	Type         string `json:"type"`
-	Region       string `json:"region"`
-	Language     string `json:"language"`
-	ReleaseDate  string `json:"releaseDate"`
-	Long         string `json:"long"`
-	Sname        string `json:"sname"`
-	Title        string `json:"title"`
+	ID           string `json:"m_id"`
+	URL          string `json:"m_url"`
+	Director     string `json:"m_director"`
+	Screenwriter string `json:"m_screenwriter"`
+	Starring     string `json:"m_starring"`
+	Type         string `json:"m_type"`
+	Region       string `json:"m_region"`
+	Language     string `json:"m_language"`
+	ReleaseDate  string `json:"m_releaseDate"`
+	Long         string `json:"m_long"`
+	Sname        string `json:"m_sname"`
+	Title        string `json:"m_title"`
 }
 
-type RankType []struct {
+type RankType struct {
 	ActorCount  int64    `json:"actor_count"`
 	Actors      []string `json:"actors"`
 	CoverURL    string   `json:"cover_url"`
