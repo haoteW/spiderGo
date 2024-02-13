@@ -10,5 +10,6 @@ docker start mysql-container
 nohup go run main.go > logs/main.log 2>&1 &
 nohup go run frontend/starter.go > logs/starter.log 2>&1 &
 cd ./frontend/spider_front
-nohup  npm run dev > ../../logs/frontend.log 2>&1 &
+cnpm install
+nohup  cnpm run dev > ../../logs/frontend.log 2>&1 &
 cd -
