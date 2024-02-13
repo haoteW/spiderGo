@@ -20,4 +20,4 @@ stop_program "main.go"
 stop_program "starter"
 
 # 停止 frontend.go
-stop_program "frontend"
+stop_program "npm"
