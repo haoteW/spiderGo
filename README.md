@@ -23,6 +23,9 @@
     docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=123456  -p 3306:3306 mysql
     docker exec -it mysql-container mysql -u root -p
 
+``how to start
+    sh bin/restart.sh
+
 ## 补充前端展现样式
 ![img.png](img.png)
 

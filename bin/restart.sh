@@ -1,2 +1,2 @@
-sh stop.sh
-sh start.sh
+sh bin/stop.sh
+sh bin/start.sh
